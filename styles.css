@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Green-500: hsl(158, 36%, 37%);
+  --Green-700: hsl(158, 42%, 18%);
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Fraunces", serif; */
+  background-color: var(--Cream);
+}
+img,
+picture {
+  max-width: 100%;
+
+  display: block;
+}
+main {
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-preview {
+  max-width: 60rem;
+  background-color: var(--White);
+  overflow: hidden;
+  border-radius: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.product-image img {
+  height: 100%;
+}
+.product-content {
+  padding: 3.2rem;
+}
+.product-head,
+.product-price {
+  margin-bottom: 3.2rem;
+}
+.product-subtitle {
+  display: inline-block;
+  color: var(--Grey);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2.4rem;
+}
+.product-title {
+  font-family: "Fraunces", serif;
+  line-height: 1.08;
+  color: var(--Black);
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+}
+.product-description {
+  font-size: 1.4rem;
+  color: var(--Grey);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.product-price--new {
+  font-family: "Fraunces", serif;
+  color: var(--Green-500);
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.product-price--old {
+  font-size: 1.3rem;
+  color: var(--Grey);
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  border: none;
+  outline: none;
+  padding: 1.6rem 3.2rem;
+  background-color: var(--Green-500);
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  color: var(--White);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn:is(:hover, :active) {
+  background-color: var(--Green-700);
+}
+
+/* Media Query*/
+
+@media (max-width: 600px) {
+  main {
+    align-items: flex-start;
+  }
+  .product-preview {
+    grid-template-columns: 1fr;
+  }
+  .product-content {
+    padding-bottom: 20rem;
+  }
+  .product-head,
+  .product-price {
+    margin-bottom: 2.4rem;
+  }
+}
